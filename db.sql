@@ -1,0 +1,16 @@
+CREATE DATABASE music_works;
+
+USE music_works;
+
+CREATE TABLE artists (
+  id INT(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  name VARCHAR(255) NOT NULL,
+  title VARCHAR(255) NOT NULL
+);
+
+CREATE TABLE votes (
+  id INT(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  artist_id INT(11) NOT NULL,
+  score INT(11) NOT NULL,
+  FOREIGN KEY (artist_id) REFERENCES artists(id)
+);
