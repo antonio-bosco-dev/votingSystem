@@ -2,7 +2,7 @@
 
 /*
 Questo codice implementa la connessione al database, la verifica dei dati di accesso inviati dall'utente, 
-e la gestione della sessione per l'utente. Assicurati di sostituire i valori your_username, your_password e your_dbname con i dati di accesso al tuo database.
+e la gestione della sessione per l'utente.
 */
 
 // Connessione al database
