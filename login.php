@@ -2,7 +2,7 @@
 
 /*
 Questo codice implementa la connessione al database, la verifica dei dati di accesso inviati dall'utente, 
-e la gestione della sessione per l'utente.
+e la gestione della sessione per l'utente. 
 */
 
 // Connessione al database
@@ -33,7 +33,10 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
     $_SESSION['username'] = $username;
     
     // Reindirizzamento alla pagina principale
-    header("Location: main.php");
+    if ($_SESSION['username']=="risultati")
+      header("Location: results.php");
+    else
+      header("Location: main.php");
   } else {
     // Visualizzazione del messaggio di errore
     echo "Username o password non corretti. Riprova.";
